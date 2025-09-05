@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <nav className='bg-gray-800/25 fixed top-7 p-1 border-[1px] md:top-7 md:bottom-auto border-gray-100/30 rounded-2xl' >
+    <nav className='bg-gray-800/25 fixed top-7 p-1 border-[1px] md:top-7 md:bottom-auto border-gray-100/30 rounded-2xl z-50' >
       <ul className='flex gap-1' >
         <li>
           <Link href={"/"} prefetch={true} className={`${linkClass} ${pathname === '/' ? 'bg-red-dalowa/95 cursor-default' : 'hover:text-red-dalowa hover:border-red-dalowa hover:bg-gray-300/10 hover:cursor-pointer'}`}>

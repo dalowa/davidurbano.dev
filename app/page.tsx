@@ -6,7 +6,7 @@ export default function Home() {
   return (
 
     <>
-      <section className="flex flex-col w-[75vw] min-h-[80vh] justify-center items-center gap-[1vh] text-white-dalowa mb-[10vh]">
+      <section className=" flex flex-col w-[75vw] min-h-[80vh] justify-center items-center gap-[1vh] text-white-dalowa mb-[10vh]">
         <div className="glowing-bg ">
           <Image src="/dalowaclear.png" alt="David Urbano" priority width={275} height={275} className="scale-110" />
         </div>
@@ -18,7 +18,7 @@ export default function Home() {
         </p>
       </section>
       
-      <section className="border-2 border-red-dalowa flex flex-col min-h-[80vh] w-[75vw] p-8 text-white justify-center">
+      <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
 
       </section>
     </>
