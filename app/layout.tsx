@@ -3,6 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+import { Funnel_Display } from 'next/font/google';
+
+const funnel = Funnel_Display({ subsets: ['latin'], weight: ['300','400','500','700', '800'], variable: '--font-funnel' });
 
 export const metadata: Metadata = {
   title: {
@@ -61,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-black-dalowa flex flex-col items-center`}
+        className={`antialiased bg-black-dalowa flex flex-col items-center ${funnel.className}`}
       >
         <Navbar />
         <main className="px-5 pt-24 pb-5 md:pt-28">

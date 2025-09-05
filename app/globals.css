@@ -8,10 +8,44 @@
 @theme {
   --color-red-dalowa: #ff190a;
   --color-black-dalowa: #0A0E17;
+  --color-white-dalowa: #f2f2f2;
 }
 
 .vertical-mail {
   @media (width >= 48rem){
     writing-mode: sideways-lr;
+  }
+}
+
+.texto-background {
+  background: linear-gradient(135deg, #ff190a 0%, #ff190a 10%, #ff190a 20%, #ff190a 30%, #ff190a 40%, #ff5e54 50%, #ff190a 60%, #ff190a 70%, #ff190a 80%, #ff190a 90%, #ff190a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradient-shift 5s ease-in-out infinite;
+}
+
+.glowing-bg {
+  /* background: linear-gradient(180deg, #ff190a 0%, #e61709 10%, #cc1408 20%, #b31207 30%, #990f06 40%, #800d05 50%, #990f06 60%, #b31207 70%, #cc1408 80%, #e61709 90%, #ff190a 100%); */
+  background: linear-gradient(135deg, #ff190a 0%, #ff190a 10%, #ff190a 20%, #ff190a 30%, #ff190a 40%, #ff5e54 50%, #ff190a 60%, #ff190a 70%, #ff190a 80%, #ff190a 90%, #ff190a 100%);
+  background-size: 300% 300%;
+  animation: gradient-shift 5s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, { 
+    background-position: 0% 50%; 
+  }
+  25% { 
+    background-position: 50% 0%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  75% { 
+    background-position: 200% 0%; 
+  }
+  100% { 
+    background-position: 400% 100%; 
   }
 }
