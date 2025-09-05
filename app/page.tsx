@@ -7,8 +7,8 @@ export default function Home() {
 
     <>
       <section className="flex flex-col w-[75vw] min-h-[80vh] justify-center items-center gap-[1vh] text-white-dalowa mb-[10vh]">
-        <div className="glowing-bg">
-          <Image src="/dalowaclear.png" alt="David Urbano" priority width={300} height={300} className="" />
+        <div className="glowing-bg ">
+          <Image src="/dalowaclear.png" alt="David Urbano" priority width={275} height={275} className="scale-110" />
         </div>
         
         <h1 className="text-center font-extrabold text-4xl texto-background">David Urbano</h1>
