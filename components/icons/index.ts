@@ -1,4 +1,3 @@
-
 export { AboutIcon } from './AboutIcon';
 export { BlogIcon } from './BlogIcon';
 export { DeployIcon } from './DeployIcon';
@@ -11,3 +10,7 @@ export { LinkedinIcon } from './LinkedinIcon';
 export { TwitterIcon } from './TwitterIcon';
 export { ChessIcon } from './ChessIcon';
 export { SpotifyIcon } from './SpotifyIcon';
+export { Dartboard } from './Dartboard'
+export {LocationIcon} from './LocationIcon'
+export {ScreenIcon} from './ScreenIcon'
+export {StudentIcon} from './StudentIcon'
