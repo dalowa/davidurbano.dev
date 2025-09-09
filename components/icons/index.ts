@@ -1,3 +1,4 @@
+
 export { AboutIcon } from './AboutIcon';
 export { BlogIcon } from './BlogIcon';
 export { DeployIcon } from './DeployIcon';
@@ -14,3 +15,4 @@ export { Dartboard } from './Dartboard'
 export {LocationIcon} from './LocationIcon'
 export {ScreenIcon} from './ScreenIcon'
 export {StudentIcon} from './StudentIcon'
+export {LinkIcon} from './LinkIcon'

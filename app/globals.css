@@ -49,3 +49,51 @@
     background-position: 400% 100%; 
   }
 }
+
+.animate-scale-in {
+  animation: scale-in 0.8s ease-out;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.websiterelevant {
+  background: linear-gradient(135deg, #ff190a 0%, #800d05 50%, #ff190a 100%);
+  background-size: 400% 400%;
+  animation: gradient-loading 2s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+.websiterelevant.loaded {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/johnmayta-web.jpg') center/cover no-repeat;
+  animation: none;
+  @media (width >= 64rem){
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('/johnmayta-web.jpg') center/cover no-repeat;
+  }
+}
+
+@keyframes gradient-loading {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
