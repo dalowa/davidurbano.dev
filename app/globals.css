@@ -97,3 +97,16 @@
     background-position: 100% 50%;
   }
 }
+
+.animate-opacity-in {
+  animation: opacity-in 0.8s ease-out forwards;
+}
+
+@keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

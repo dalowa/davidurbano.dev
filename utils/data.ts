@@ -12,5 +12,14 @@ export const heroAboutSection = {
       title: "Beyond Code",
       description: "Gaming, chess strategy, and exploring how technology can solve real-world problems"
    },
-}
+};
+
+export const heroWorkSection = {
+   typeProject: "Website Project",
+   nameProject: "John Mayta - Photographer",
+   description: "Photography portfolio site connecting to external API for dynamic photo display. Replicated professional design to showcase John Mayta's work and facilitate client engagement.",
+   tools: ["Vercel", "NextJS", "Typescript", "TailwindCSS"],
+   githubLink: "",
+   websiteLink: "https://john-mayta.vercel.app/inicio"
+};
 
