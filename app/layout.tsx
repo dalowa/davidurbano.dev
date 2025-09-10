@@ -67,7 +67,7 @@ export default function RootLayout({
         className={`antialiased bg-black-dalowa flex flex-col items-center ${funnel.className}`}
       >
         <Navbar />
-        <main className="px-5 pt-24 pb-5 md:pt-28">
+        <main className="px-5 pt-24 pb-5">
           {children}
         </main>
         
