@@ -51,14 +51,19 @@ export default function Home() {
       <HeroProjects />
 
       {/* -- BLOG SECTION -- */}
-      <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
-        
+      <section className="border-2 mb-[10vh] border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
+        <h2 className="text-center font-extrabold text-3xl text-red-dalowa">Latest Blog Posts</h2>
       </section>   
 
-      {/* -- BANNER SECTION -- */}
+      {/* -- CONTACT SECTION -- */}
       <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
-
+        <h2 className="text-center font-extrabold text-3xl text-red-dalowa mb-4">Get in Touch</h2>
       </section>
+
+      {/* -- BANNER SECTION -- */}
+      {/* <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
+
+      </section> */}
     </>
   );
 }
