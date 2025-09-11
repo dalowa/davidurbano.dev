@@ -68,7 +68,7 @@ export default function HeroAbout() {
               href="/about" 
               className="inline-flex items-center gap-2 bg-red-dalowa hover:bg-red-dalowa/80 px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Learn more about me
+              More about me
               <span className="text-lg">→</span>
             </Link>
           </div>
