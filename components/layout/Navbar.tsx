@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 
 import React from 'react'
 import Link from 'next/link'
-import { AboutIcon, BlogIcon, GalleryIcon, HomeIcon, WorkIcon } from '../icons';
+import { AboutIcon, BlogIcon, HomeIcon, LetterIcon, WorkIcon } from '../icons';
 
 /*  bg-gray-300/25 */
 
@@ -30,9 +30,9 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href={"/work"} prefetch={true} className={`${linkClass} ${pathname === '/work' ? 'bg-red-dalowa/95 cursor-default' : 'hover:text-red-dalowa hover:border-red-dalowa hover:bg-gray-300/10 hover:cursor-pointer'}`}>
+          <Link href={"/projects"} prefetch={true} className={`${linkClass} ${pathname === '/projects' ? 'bg-red-dalowa/95 cursor-default' : 'hover:text-red-dalowa hover:border-red-dalowa hover:bg-gray-300/10 hover:cursor-pointer'}`}>
             <WorkIcon className='text-[1.4rem] ' /> 
-            <p className='hidden md:inline' >Work</p>
+            <p className='hidden md:inline' >Projects</p>
           </Link>
           
         </li>
@@ -43,9 +43,9 @@ export default function Navbar() {
           </Link>
         </li>
         <li >
-          <Link href={"/gallery"} prefetch={true} className={`${linkClass} ${pathname === '/gallery' ? 'bg-red-dalowa/95 cursor-default' : 'hover:text-red-dalowa hover:border-red-dalowa hover:bg-gray-300/10 hover:cursor-pointer'}`}>
-            <GalleryIcon className='text-[1.4rem] ' /> 
-            <p className='hidden md:inline' >Gallery</p>
+          <Link href={"/contact"} prefetch={true} className={`${linkClass} ${pathname === '/contact' ? 'bg-red-dalowa/95 cursor-default' : 'hover:text-red-dalowa hover:border-red-dalowa hover:bg-gray-300/10 hover:cursor-pointer'}`}>
+            <LetterIcon className='text-[1.4rem]' /> 
+            <p className='hidden md:inline' >Contact</p>
           </Link>
         </li>
       </ul>
