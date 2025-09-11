@@ -3,7 +3,8 @@ import Image from "next/image";
 /* import dynamic from 'next/dynamic'; */
 
 import HeroAbout from "@/components/sections/HeroAbout";
-import HeroWork from "@/components/sections/HeroWork";
+
+import HeroProjects from "@/components/sections/HeroProjects";
 
 
 // Dynamically import MapBox to avoid SSR issues
@@ -46,8 +47,13 @@ export default function Home() {
       {/* -- ABOUT SECTION -- */}
       <HeroAbout />
 
-      {/* -- WORK SECTION -- */}
-      <HeroWork />
+      {/* -- PROJECTS SECTION -- */}
+      <HeroProjects />
+
+      {/* -- BLOG SECTION -- */}
+      <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
+        
+      </section>   
 
       {/* -- BANNER SECTION -- */}
       <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
