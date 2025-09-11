@@ -1,10 +1,10 @@
 'use client'
 
-import Link from 'next/link'
 import { GithubIcon, LinkIcon } from '../icons'
 import { HeroProjectShowBox } from '../ui/HeroProjectShowBox'
 import { useIntersectionObserver } from '@/hooks';
 import { heroWorkSection } from '@/utils/data';
+import { ToPageButton } from '../ui/ToPageButton';
 
 export default function HeroProjects() {
 
@@ -30,9 +30,9 @@ export default function HeroProjects() {
           <div className="flex flex-col gap-6 px-5 rounded-lg max-w-lg z-10 lg:max-w-[450px] lg:items-end">
             <div className="w-full flex flex-col lg:items-end">
               <span className="font-light text-sm lg:text-end">{heroWorkSection.typeProject}</span>
-              <h3 className="font-bold text-red-dalowa text-lg">{heroWorkSection.nameProject}</h3>
+              <h3 className="font-bold text-red-dalowa text-lg xl:text-xl">{heroWorkSection.nameProject}</h3>
             </div>
-            <p className="font-light text-base lg:bg-red-dalowa/65 lg:text-end lg:p-2">{heroWorkSection.description}</p>
+            <p className="font-light text-base lg:bg-gray-800/75 lg:p-2 lg:rounded-lg lg:border lg:border-gray-700/90 lg:text-end">{heroWorkSection.description}</p>
             <ul className="flex flex-wrap gap-2 lg:w-[275px] justify-end text-xs lg:text-sm font-light lg:text-white-dalowa text-red-dalowa">
               {heroWorkSection.tools.map((tool, index) => (
                 <li key={index} className="lg:px-2 lg:py-1 lg:border-[1px] border-red-dalowa rounded-lg">{tool}</li>
@@ -46,14 +46,11 @@ export default function HeroProjects() {
         
         </div>
         <div className="flex justify-center lg:justify-start mx-auto">
-            <Link 
-              href="/projects" 
-              className="inline-flex items-center gap-2 bg-red-dalowa hover:bg-red-dalowa/80 px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              {`Projects gallery`}
-              <span className="text-lg">→</span>
-            </Link>
-          </div>
+            <ToPageButton redirectTo="/projects">
+              Projects gallery
+            </ToPageButton>
+
+        </div>
       </section>
   )
 }
