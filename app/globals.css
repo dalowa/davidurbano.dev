@@ -84,8 +84,21 @@
   animation: none;
   @media (width >= 64rem){
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(rgba(255, 25, 10, 0.35), rgba(255, 25, 10, 0.35)),
     url('/johnmayta-web.jpg') center/cover no-repeat;
+    border-radius: 0.25rem;
+  }
+
+
+}
+
+.websiterelevant.loaded:hover {
+  @media (width >= 64rem){
+    background: 
+    linear-gradient(rgba(255, 25, 10, 0.0), rgba(255, 25, 10, 0.0)),
+    url('/johnmayta-web.jpg') center/cover no-repeat;
+    box-shadow: 0 4px 10px rgba(255, 25, 10, 0.6);
+    transform: scale(1.02);
   }
 }
 
