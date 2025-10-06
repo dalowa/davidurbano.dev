@@ -1,4 +1,5 @@
 
+
 export { AboutIcon } from './AboutIcon';
 export { BlogIcon } from './BlogIcon';
 export { DeployIcon } from './DeployIcon';
@@ -17,3 +18,4 @@ export {ScreenIcon} from './ScreenIcon'
 export {StudentIcon} from './StudentIcon'
 export {LinkIcon} from './LinkIcon'
 export {LetterIcon} from './LetterIcon'
+export {LabIcon} from './LabIcon'

@@ -1,13 +1,12 @@
 
 
 import React from 'react'
-import { Dartboard, LocationIcon, ScreenIcon, StudentIcon } from '../icons'
-import { heroAboutSection } from '@/utils/data'
+import { ImageAbout } from './ImageAbout'
+import { Dartboard, LocationIcon, ScreenIcon, StudentIcon } from '@/components/icons'
+import { ToPageButton } from '@/components/common'
+import { homeAboutContent } from '@/lib/data/Home'
 
-import { HeroAboutImage } from './HeroAboutImage'
-import { ToPageButton } from '../ui/ToPageButton'
-
-export default function HeroAbout() {
+export function HomeAbout() {
 
   return (
     <section
@@ -18,7 +17,7 @@ export default function HeroAbout() {
           <h2 className="text-center lg:text-left font-extrabold text-3xl text-red-dalowa">About Me</h2>
           
           <p className="text-base leading-relaxed text-center lg:text-left font-light">
-            {heroAboutSection.mainText}
+            {homeAboutContent.mainText}
           </p>
           
           <div className="space-y-4 max-w-[350px] mx-auto lg:mx-0">
@@ -27,8 +26,8 @@ export default function HeroAbout() {
                 <StudentIcon className="text-red-dalowa text-[1.75rem]" />
               </div>
               <div className="w-[calc(100%-2rem)]">
-                <h3 className="font-semibold text-red-dalowa">{heroAboutSection.learning.title}</h3>
-                <p className="text-sm text-gray-300">{heroAboutSection.learning.description}</p>
+                <h3 className="font-semibold text-red-dalowa">{homeAboutContent.sections.learning.title}</h3>
+                <p className="text-sm text-gray-300">{homeAboutContent.sections.learning.description}</p>
               </div>
             </div>
             
@@ -37,8 +36,8 @@ export default function HeroAbout() {
                 <ScreenIcon className="text-red-dalowa text-[1.75rem]" />
               </div>
               <div className="w-[calc(100%-2rem)]">
-                <h3 className="font-semibold text-red-dalowa">{heroAboutSection.tech.title}</h3>
-                <p className="text-sm text-gray-300">{heroAboutSection.tech.description}</p>
+                <h3 className="font-semibold text-red-dalowa">{homeAboutContent.sections.tech.title}</h3>
+                <p className="text-sm text-gray-300">{homeAboutContent.sections.tech.description}</p>
               </div>
             </div>
             
@@ -47,8 +46,8 @@ export default function HeroAbout() {
                 <Dartboard className="text-red-dalowa text-[1.75rem]" />
               </div>
               <div className="w-[calc(100%-2rem)]">
-                <h3 className="font-semibold text-red-dalowa">{heroAboutSection.dartboard.title}</h3>
-                <p className="text-sm text-gray-300">{heroAboutSection.dartboard.description}</p>
+                <h3 className="font-semibold text-red-dalowa">{homeAboutContent.sections.dartboard.title}</h3>
+                <p className="text-sm text-gray-300">{homeAboutContent.sections.dartboard.description}</p>
               </div>
             </div>
           </div>
@@ -59,13 +58,13 @@ export default function HeroAbout() {
           </div>
           
           <div className="flex justify-center lg:justify-start">
-            <ToPageButton redirectTo="/about">
-              More about me
+            <ToPageButton redirectTo={homeAboutContent.cta?.href as string}>
+              {homeAboutContent.cta?.text}
             </ToPageButton>
           </div>
         </div>
         
-        <HeroAboutImage />
+        <ImageAbout />
       </section>
   )
 }

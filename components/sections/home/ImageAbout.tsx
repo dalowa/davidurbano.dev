@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '@/hooks';
 import Image from 'next/image';
 import React from 'react'
 
-export const HeroAboutImage = () => {
+export const ImageAbout = () => {
     const { elementRef, isIntersecting } = useIntersectionObserver({
        threshold: 0.1,
        triggerOnce: true

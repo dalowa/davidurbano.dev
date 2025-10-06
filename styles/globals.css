@@ -50,25 +50,6 @@
   }
 }
 
-.animate-scale-in {
-  animation: scale-in 0.8s ease-out;
-}
-
-@keyframes scale-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(0.85);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 
 .websiterelevant {
   background: linear-gradient(135deg, #ff190a 0%, #800d05 50%, #ff190a 100%);
@@ -88,8 +69,6 @@
     url('/johnmayta-web.jpg') center/cover no-repeat;
     border-radius: 0.25rem;
   }
-
-
 }
 
 .websiterelevant.loaded:hover {
@@ -122,4 +101,18 @@
   100% {
     opacity: 1;
   }
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Mantener funcionalidad de scroll */
+html {
+  -ms-overflow-style: none; /* Internet Explorer y Edge */
+  overflow-y: scroll;
 }
