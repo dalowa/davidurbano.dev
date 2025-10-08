@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className={cn(`text-white w-full flex-col gap-3 items-center transition-all duration-500`,
-      { 'opacity-0 transition-opacity duration-500': isAtBottom },
+      { 'lg:opacity-0 hidden transition-opacity duration-500': isAtBottom },
       {'opacity-100 transition-opacity duration-500': !isAtBottom}
     )} >
       <div 
