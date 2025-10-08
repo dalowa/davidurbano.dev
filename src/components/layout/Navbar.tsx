@@ -15,7 +15,7 @@ export function Navbar() {
 
   const isAtBottom = useIsBottomPageStore((state) => state.isAtBottom);
   return (
-    <nav className={cn(`top-7 left-1/2 transform -translate-x-1/2 bg-gray-800/25 fixed p-1 border-[1px] md:top-7 md:bottom-auto border-gray-100/30 rounded-2xl z-[100]`,
+    <nav className={cn(`top-7 bg-gray-800/25 fixed p-1 border-[1px] md:top-7 md:bottom-auto border-gray-100/30 rounded-2xl z-[100]`,
       { 'opacity-0 transition-opacity duration-500': isAtBottom },
       {'opacity-100 transition-opacity duration-500': !isAtBottom}
     )} >
