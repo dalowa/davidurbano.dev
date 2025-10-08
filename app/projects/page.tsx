@@ -1,7 +1,13 @@
-import React from 'react'
 
-export default function ProjectsPage() {
+import React from 'react';
+
+const ProjectsPage = () => {
   return (
-    <div>ProjectsPage</div>
-  )
+    <div>
+      <h1>Projects</h1>
+      <p>{`Welcome to the projects page! Here you'll find my work and contributions.`}</p>
+    </div>
+  );
 }
+
+export default ProjectsPage;

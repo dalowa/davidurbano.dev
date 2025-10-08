@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
-import "@/styles/animations.css";
-import "@/styles/components.css";
-
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import "@/src/styles/globals.css";
+import "@/src/styles/animations.css";
+import "@/src/styles/components.css";
 
 import { Funnel_Display } from 'next/font/google';
+import { Footer, Navbar } from "@/src/components/layout";
 
 const funnel = Funnel_Display({ subsets: ['latin'], weight: ['300','400','500','700', '800'], variable: '--font-funnel' });
 
 export const metadata: Metadata = {
   title: {
-    default: "David Urbano - Software Engineer & Web Developer",
+    default: "David Urbano - Software Engineer Student & Web Developer",
     template: "%s | David Urbano"
   },
   description: "Software Engineer and Web Developer from Lima, Peru. Specialized in React, Next.js, TypeScript, and modern web technologies. Check out my portfolio and projects.",
@@ -26,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://davidurbano.dev",
     title: "David Urbano - Software Engineer & Web Developer",
     description: "Software Engineer and Web Developer from Lima, Peru. Specialized in React, Next.js, TypeScript, and modern web technologies.",
-    siteName: "David Urbano Portfolio",
+    siteName: "David Urbano Personal Website",
     images: [
       {
         url: "/og-image.jpg",
@@ -55,7 +53,7 @@ export const metadata: Metadata = {
     }
   },
   verification: {
-    google: "tu-google-verification-code", // Agregar cuando tengas Google Search Console
+    google: "google-code-here", // Agregar cuando tenga Google Search Console
   }
 };
 
@@ -67,13 +65,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-black-dalowa flex flex-col items-center ${funnel.className}`}
+        className={`antialiased bg-black-dalowa items-center ${funnel.className}`}
       >
         <Navbar />
-        <main className="px-5 pt-24 pb-5">
-          {children}
-        </main>
-        
+          <main className=" pt-24">
+            {children}
+          </main>
         <Footer />
       </body>
     </html>

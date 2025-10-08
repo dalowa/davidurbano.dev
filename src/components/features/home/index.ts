@@ -1,0 +1,6 @@
+export {HomeAbout} from './HomeAbout'
+export { HomeProjects } from './HomeProjects'
+export {HomeHero} from './HomeHero'
+export {HomeBlog} from './HomeBlog'
+export { HomeBanner } from './HomeBanner'
+export { HomeContactMe } from './HomeContactMe'

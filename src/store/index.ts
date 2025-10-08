@@ -1,0 +1,1 @@
+export { useIsBottomPageStore } from './useBottomPageStore';

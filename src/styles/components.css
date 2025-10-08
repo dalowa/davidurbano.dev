@@ -1,0 +1,5 @@
+.vertical-mail {
+  @media (width >= 48rem){
+    writing-mode: sideways-lr;
+  }
+}

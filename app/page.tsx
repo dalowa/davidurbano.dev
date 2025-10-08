@@ -1,4 +1,5 @@
-import { HomeAbout, HomeHero, HomeProjects } from "@/components/sections/home";
+
+import { HomeAbout, HomeBlog, HomeHero, HomeProjects, HomeBanner, HomeContactMe  } from "@/src/components/features/home";
 
 export default function Home() {
   return (
@@ -11,21 +12,17 @@ export default function Home() {
 
       {/* -- PROJECTS SECTION -- */}
       <HomeProjects />
-
+      
       {/* -- BLOG SECTION -- */}
-      <section className="border-2 mb-[10vh] border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
-        <h2 className="text-center font-extrabold text-3xl text-red-dalowa">Latest Blog Posts</h2>
-      </section>   
+      <HomeBlog /> 
 
-      {/* -- CONTACT SECTION -- */}
-      <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
-        <h2 className="text-center font-extrabold text-3xl text-red-dalowa mb-4">Get in Touch</h2>
-      </section>
+      {/* <AutoCenterExample /> */}
 
       {/* -- BANNER SECTION -- */}
-      {/* <section className="border-2 border-red-dalowa aspect-[16/8] flex flex-col w-[75vw] p-8 text-white justify-center">
+      <HomeBanner />
 
-      </section> */}
+      {/* -- CONTACT SECTION -- */}
+      <HomeContactMe />
     </>
   );
 }
