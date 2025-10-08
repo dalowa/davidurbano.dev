@@ -15,8 +15,8 @@ export function Footer() {
       {'opacity-100 transition-opacity duration-500': !isAtBottom}
     )} >
       <div 
-        className={cn('vertical-mail bottom-0 right-7 font-bold',
-          `md:gap-3 md:justify-center md:fixed md:flex md:flex-row-reverse md:items-center`
+        className={cn('vertical-mail bottom-0 right-7 font-bold flex justify-center',
+          `md:gap-3 md:justify-center md:fixed md:flex-row-reverse md:items-center`
         )}>
         <a className="tracking-[0.2rem] md:tracking-[0.1rem] md:font-extrabold vertical-text md:text-red-dalowa hover:-translate-y-1 hover:text-white hover:transition duration-300" href="mailto:davidurbano.dev@gmail.com"> {SITE_CONFIG.social.email} </a>
         <div className="md:w-[2px] md:h-[7.5rem] md:bg-red-dalowa"></div>
@@ -24,7 +24,7 @@ export function Footer() {
       <div 
         className={cn("md:fixed bottom-0 left-7 md:flex md:flex-col md:justify-center md:items-center")}
         >
-        <ul className={cn('flex gap-3', "md:gap-5 py-3 md:flex-col md:justify-center md:items-center")}>
+        <ul className={cn('flex gap-3 justify-center', "md:gap-5 py-3 md:flex-col md:justify-center md:items-center")}>
             {
               FOOTER_LINKS.map(({href, label, icon: IconComponent}) => (
                 <li key={href} className=''>
