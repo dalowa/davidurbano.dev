@@ -16,8 +16,6 @@ export default function Home() {
       {/* -- BLOG SECTION -- */}
       <HomeBlog /> 
 
-      {/* <AutoCenterExample /> */}
-
       {/* -- BANNER SECTION -- */}
       <HomeBanner />
 
