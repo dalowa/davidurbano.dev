@@ -8,3 +8,4 @@ export type { ShowcaseProjectProps } from './components';
 export type { IsBottomPageState } from './type-stores';
 export type { FooterContent } from './type-content';
 export type { NavigationItem } from './components';
+export type { ContactFormFieldProps } from './components';

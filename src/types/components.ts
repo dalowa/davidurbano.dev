@@ -31,3 +31,11 @@ export interface ExternalLinkProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface ContactFormFieldProps {
+  label: string
+  type: 'text' | 'email' | 'textarea'
+  placeholder: string
+  required?: boolean
+  name?: string
+}
