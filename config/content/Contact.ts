@@ -1,7 +1,6 @@
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/src/components/icons";
 import { SITE_CONFIG } from "./static-website-data";
 
-// config/contact.ts
 export const CONTACT_CONFIG = {
   title: "Let's build something together",
   subtitle: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions",

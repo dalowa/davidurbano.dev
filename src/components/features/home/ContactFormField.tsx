@@ -10,8 +10,8 @@ export function ContactFormField({
 }: ContactFormFieldProps) {
   const inputClasses = cn(
     "p-2 rounded border outline-none transition-colors duration-200",
-    "border-black-dalowa/50 focus:border-black-dalowa",
-    "placeholder:text-black-dalowa/85"
+    "border-black-dalowa/10 focus:border-black-dalowa",
+    "placeholder:text-black-dalowa/50"
   )
 
   const labelClasses = cn(

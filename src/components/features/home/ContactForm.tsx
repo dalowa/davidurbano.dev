@@ -1,6 +1,7 @@
 
 
 import { cn } from '@/src/lib/utils'
+import { CONTACT_CONFIG } from '@/config/content'
 import { SocialLinks } from './SocialLinks'
 import { ContactFormField } from './ContactFormField'
 
@@ -22,50 +23,34 @@ export function ContactForm() {
         "lg:inline lg:text-2xl lg:max-w-xs lg:w-full",
         "xl:text-3xl xl:max-w-md"
       )}>
-        Send a message
+        {CONTACT_CONFIG.formTitle}
       </h5>
       
       <form onSubmit={handleSubmit} className={cn(
         "max-w-xs w-full flex flex-col",
         "lg:text-black-dalowa/65",
         "xl:max-w-md"
-      )}>
-        <ContactFormField
-          label="Full Name"
-          type="text"
-          placeholder="Your Name"
-          required
-        />
-        
-        <ContactFormField
-          label="Email"
-          type="email"
-          placeholder="you@example.com"
-          required
-        />
-        
-        <ContactFormField
-          label="Subject"
-          type="text"
-          placeholder="Regarding..."
-          required
-        />
-        
-        <ContactFormField
-          label="Message"
-          type="textarea"
-          placeholder="Your message..."
-          required
-        />
+        )}>
+        {
+          CONTACT_CONFIG.fields.map((field) => (
+            <ContactFormField
+              key={field.name}
+              label={field.label}
+              type={field.type}
+              placeholder={field.placeholder}
+              name={field.name}
+            />
+          ))
+        }
         
         <button
           type="submit"
           className={cn(
             "py-2 px-4 rounded text-white transition-colors duration-200",
-            "bg-black-dalowa hover:bg-red-dalowa hover:cursor-pointer"
+            "bg-black-dalowa focus:bg-red-dalowa focus:border-none focus:outline-none hover:bg-red-dalowa hover:cursor-pointer"
           )}
         >
-          Send
+          Send message
         </button>
       </form>
       <SocialLinks />

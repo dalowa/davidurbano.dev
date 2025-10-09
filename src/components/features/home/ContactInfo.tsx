@@ -1,4 +1,4 @@
-// src/components/features/home/contact/ContactInfo.tsx
+import { CONTACT_CONFIG } from '@/config/content'
 import { DalowaBlackIcon } from '@/src/components/icons'
 import { cn } from '@/src/lib/utils'
 
@@ -14,7 +14,7 @@ export function ContactInfo() {
         "lg:text-4xl",
         "xl:text-5xl"
       )}>
-        {`Let's build something together`}
+        {CONTACT_CONFIG.title}
       </h4>
       
       <p className={cn(
@@ -22,7 +22,7 @@ export function ContactInfo() {
         "lg:inline",
         "2xl:text-lg"
       )}>
-        {`I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions`}
+        {CONTACT_CONFIG.subtitle}
       </p>
       
       <DalowaBlackIcon className={cn(
