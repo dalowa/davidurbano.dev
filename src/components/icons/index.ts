@@ -1,5 +1,5 @@
 
-
+export { DalowaBlackIcon } from './DalowaBlackIcon';
 export { AboutIcon } from './AboutIcon';
 export { BlogIcon } from './BlogIcon';
 export { DeployIcon } from './DeployIcon';
