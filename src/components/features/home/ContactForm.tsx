@@ -20,7 +20,7 @@ export function ContactForm() {
       <h5 className={cn(
         "hidden font-bold",
         "lg:inline lg:text-2xl lg:max-w-xs lg:w-full",
-        "xl:text-4xl xl:max-w-md"
+        "xl:text-3xl xl:max-w-md"
       )}>
         Send a message
       </h5>
