@@ -1,16 +1,18 @@
-
-
 import { cn } from '@/src/lib/utils'
 import { CONTACT_CONFIG } from '@/config/content'
 import { SocialLinks } from './SocialLinks'
 import { ContactFormField } from './ContactFormField'
+import { useContactForm } from '@/src/hooks/useContactForm'
 
 export function ContactForm() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // TODO: Implement logic
-    console.log('Form submitted')
-  }
+  const { 
+    formData, 
+    errors, 
+    isSubmitting, 
+    submitSuccess,
+    handleChange, 
+    handleSubmit 
+  } = useContactForm()
 
   return (
     <div className={cn(
@@ -26,33 +28,52 @@ export function ContactForm() {
         {CONTACT_CONFIG.formTitle}
       </h5>
       
+      {submitSuccess && (
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+          ¡Mensaje enviado exitosamente!
+        </div>
+      )}
+      
       <form onSubmit={handleSubmit} className={cn(
         "max-w-xs w-full flex flex-col",
         "lg:text-black-dalowa/65",
         "xl:max-w-md"
-        )}>
-        {
-          CONTACT_CONFIG.fields.map((field) => (
-            <ContactFormField
-              key={field.name}
-              label={field.label}
-              type={field.type}
-              placeholder={field.placeholder}
-              name={field.name}
-            />
-          ))
-        }
+      )}>
+        {CONTACT_CONFIG.fields.map((field) => (
+          <ContactFormField
+            key={field.name}
+            label={field.label}
+            type={field.type}
+            placeholder={field.placeholder}
+            name={field.name}
+            onChange={handleChange}
+            stateValue={formData[field.name as keyof typeof formData]}
+            error={errors[field.name]}
+          />
+        ))}
+        <label className='hidden'>
+          <input
+          placeholder='detect bots' 
+          name="website" 
+          type="text" 
+          tabIndex={-1}
+          autoComplete="off"
+          />
+        </label>
         
         <button
           type="submit"
+          disabled={isSubmitting}
           className={cn(
             "py-2 px-4 rounded text-white transition-colors duration-200",
-            "bg-black-dalowa focus:bg-red-dalowa focus:border-none focus:outline-none hover:bg-red-dalowa hover:cursor-pointer"
+            "bg-black-dalowa focus:bg-red-dalowa focus:border-none focus:outline-none hover:bg-red-dalowa hover:cursor-pointer",
+            "disabled:opacity-50 disabled:cursor-not-allowed"
           )}
         >
-          Send message
+          {isSubmitting ? 'Sending...' : 'Send message'}
         </button>
       </form>
+      
       <SocialLinks />
     </div>
   )
