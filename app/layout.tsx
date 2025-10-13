@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "@/src/styles/globals.css";
 import "@/src/styles/animations.css";
 import "@/src/styles/components.css";
@@ -68,6 +69,7 @@ export default function RootLayout({
       <body
         className={`antialiased flex flex-col items-center bg-black-dalowa ${funnel.className}`}
       >
+        <SpeedInsights />
         <Navbar />
           <main className=" pt-24">
             {children}
