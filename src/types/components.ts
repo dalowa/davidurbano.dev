@@ -34,8 +34,11 @@ export interface ExternalLinkProps {
 
 export interface ContactFormFieldProps {
   label: string
-  type: 'text' | 'email' | 'textarea'
+  type: string
   placeholder: string
   required?: boolean
   name?: string
+  stateValue?: string
+  onChange?: (name: string, value: string) => void
+  error?: string
 }
