@@ -1,5 +1,5 @@
-import { ContactFormData } from '@/src/types/type-nodemailer';
-import { transporter, EMAIL_CONFIG, type EmailOptions } from './email';
+import { ContactFormData, EmailOptions } from '@/src/types/type-nodemailer';
+import { transporter, EMAIL_CONFIG } from './email';
 import { createContactEmailTemplate } from './email-templates';
 
 /**
