@@ -2,7 +2,7 @@
 
 import { useCenterTag } from '@/src/hooks'
 
-export const HomeBanner = () => {
+export const HomeLab = () => {
    const { elementRef } = useCenterTag()
    return (
       <section 

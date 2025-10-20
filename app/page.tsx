@@ -1,5 +1,5 @@
 
-import { HomeAbout, HomeBlog, HomeHero, HomeProjects, HomeBanner, HomeContactMe  } from "@/src/components/features/home";
+import { HomeAbout, HomeBlog, HomeHero, HomeProjects, HomeContactMe, HomeLab  } from "@/src/components/features/home";
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
       {/* -- BLOG SECTION -- */}
       <HomeBlog /> 
 
-      {/* -- BANNER SECTION -- */}
-      <HomeBanner />
+      {/* -- LAB SECTION -- */}
+      <HomeLab />
 
       {/* -- CONTACT SECTION -- */}
       <HomeContactMe />
