@@ -32,11 +32,9 @@ export async function POST(request: NextRequest) {
     // 4. Obtener datos del formulario
    
     const formData = await request.json();
-    console.log('Request received:', formData);
     // 5. Verificar Honeypot
     if (isHoneypotFilled(formData.website)) {
       logBotDetection(ip, formData.website);
-      console.log('Honeypot filled, treating as bot.');
       return createCORSResponse(
         { error: 'Solicitud inválida' }, 
         400, 
@@ -45,10 +43,7 @@ export async function POST(request: NextRequest) {
     }
     
     // 6. Validar formulario
-    console.log('Validating form data...');
     const validation = validateContactForm(formData);
-    console.log('Validation result:', !validation.isValid);
-    console.log('Validation errors:', validation.errors);
     if (!validation.isValid) {
       return createCORSResponse(
         { error: validation.errors[0] }, 
@@ -58,11 +53,9 @@ export async function POST(request: NextRequest) {
     }
     
     // 7. Sanitizar datos
-    console.log('Sanitizing data...');
     const sanitizedData = sanitizeContactForm(formData);
     
     // 8. Enviar email
-    console.log('Sending email...');
     const emailResult = await sendContactEmail({
       ...sanitizedData,
       ip
