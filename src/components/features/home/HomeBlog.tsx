@@ -1,6 +1,6 @@
 'use client'
 
-import Link from "next/link"
+import { ToPageButton } from "../../ui"
 
 export const HomeBlog = () => {
    return (
@@ -31,9 +31,12 @@ export const HomeBlog = () => {
                <a className="text-red-dalowa/75" href="#">Read more</a>
             </div>
          </div>
-         <Link className="mx-auto block w-fit rounded-lg border-2 border-red-dalowa px-4 py-2 text-center text-red-dalowa transition-colors hover:bg-red-dalowa/10" href="/blog">
-            Visit My Blog
-         </Link>
+         <div className="flex justify-end w-full">
+            <ToPageButton redirectTo="/blog">
+               Visit My Blog
+            </ToPageButton>
+         </div>
+         
       </section>  
    )
 }
