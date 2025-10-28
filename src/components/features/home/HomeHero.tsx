@@ -6,9 +6,10 @@ export const HomeHero = () => {
       <section className={cn("animate-fade-in mx-auto flex flex-col w-[75vw] max-w-6xl min-h-[80vh] justify-center items-center gap-[1vh] text-white-dalowa mb-[10vh]")}>
          <div className="glowing-bg">
             <Image 
-               src="/dalowa-logo-clear.png" 
+               src="/dalowa-logo-clear.webp" 
                alt="David Urbano" 
-               priority 
+               priority
+               loading='eager' 
                width={275} height={275} 
                className="scale-110" 
             />
