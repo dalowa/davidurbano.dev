@@ -3,7 +3,12 @@
 import { useCenterTag } from '@/src/hooks'
 import { cn } from '@/src/lib/utils'
 import { ContactInfo } from './ContactInfo'
-import { ContactForm } from './ContactForm'
+import dynamic from 'next/dynamic'
+
+const ContactForm = dynamic(() => import('./ContactForm').then(mod => mod.ContactForm), {
+  loading: () => <p>Cargando formulario...</p>,
+  ssr: false
+})
 
 export function HomeContactMe() {
   const { elementRef, isInViewport } = useCenterTag()
@@ -20,8 +25,8 @@ export function HomeContactMe() {
         }
       )}
     >
-      <ContactInfo />
-      <ContactForm />
+  <ContactInfo />
+  <ContactForm />
     </section>
   )
 }
