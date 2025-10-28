@@ -13,7 +13,7 @@ export const ImageAbout = () => {
     <div className="w-full lg:w-[50%] z-10 max-w-[500px]">
       <Image
       ref={elementRef as React.RefObject<HTMLImageElement>} 
-      src={"/draw.png"} 
+      src={"/draw.webp"} 
       alt="Lima, Perú" 
       width={500} 
       height={500} 
