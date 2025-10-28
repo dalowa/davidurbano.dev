@@ -8,7 +8,7 @@ export const PhotographerWebsite:Project = {
   techStack: ["OAuth Authentication","Next.js", "TailwindCSS", "Smugmug API" ],
   repositoryLink: "https://github.com/dalowa/dalowa_john-mayta",
   deployLink: "https://john-mayta.vercel.app/inicio",
-  imageUrl: "/PhotographerWebsiteScreenshot-v1.jpg",
+  imageUrl: "/PhotographerWebsiteScreenshot-v1.webp",
   featured: false,
 }
 
@@ -20,6 +20,6 @@ export const CountriesExplorer: Project = {
   techStack: ["Next.js", "Zustand", "Typescript", "TailwindCSS", "REST Countries API"],
   repositoryLink: "https://github.com/dalowa/insalud-tt",
   deployLink: "https://countries-explorer-beta.vercel.app/",
-  imageUrl: "/CountriesExplorerScreenshot-v1.png",
+  imageUrl: "/CountriesExplorerScreenshot-v1.webp",
   featured: false,
 }
